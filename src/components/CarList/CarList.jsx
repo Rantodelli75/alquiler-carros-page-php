@@ -4,8 +4,8 @@ import React from "react";
 import {Input} from "@nextui-org/react";
 import {Popover, PopoverTrigger, PopoverContent, Button} from "@nextui-org/react";
 import whiteCar from "../../assets/evoque-white.png";
-import car2 from "../../assets/car5.png";
-import car3 from "../../assets/toyota-tacoma.png";
+import car2 from "../../assets/pathfinder-nissan.png";
+import car3 from "../../assets/toyota tacoma.png";
 import car4 from "../../assets/ford-expedition.png";
 import car5 from "../../assets/volkswagen-atlas.png";
 import car6 from "../../assets/dmax-dc.png";
@@ -19,9 +19,9 @@ const carList = [
     aosDelay: "0",
   },
   {
-    name: "Scorpio S3+",
-    subname: "Mahindra",
-    price: 100,
+    name: "Pathfinder 2023",
+    subname: "Nissan",
+    price: 140,
     image: car2,
     aosDelay: "500",
   },
@@ -69,8 +69,8 @@ const CarList = () => {
         <p data-aos="fade-up" aos-delay="400" className="text-lg pb-10 font-mono mb-3 text-neutral-700 font-bold">
           Categorias
         </p>
-        <p data-aos="fade-up" aos-delay="400" className="text-2xl pb-10 font-serif mb-3 text-neutral-600 font-bold">
-          SUV:
+        <p data-aos="fade-up" aos-delay="400" className="text-4xl pb-10 font-serif mb-3 text-emerald-400 font-bold">
+          SUV
         </p>
         {/* lista de carros */}
         <div>
@@ -91,37 +91,32 @@ const CarList = () => {
                 </div>
                 <div className="space-y-2">
                   <h1 className="text-emerald-400 font-semibold">{data.name}</h1>
-                  <h2 className="text-neutral-900 font-semibold text-sm">{data.subname}</h2>
+                  <h2 className="text-emerald-900 font-semibold text-sm">{data.subname}</h2>
                   <div className="flex justify-between items-center text-xl font-semibold">
                     <p>${data.price} / Día</p>
                     {/* boton de prueba para registro de conductor */}
                     <Popover placement="right">
                         <PopoverTrigger>
-                          <Button color="#3BD4AE" className="w-20 rounded-md bg-emerald-400">Alquilar</Button>
+                          <Button className="text-emerald-900 font-mono font-semibold text-base w-24 rounded-full bg-auto bg-emerald-400 border border-emerald-400 hover:border-emerald-900">Alquilar</Button>
                         </PopoverTrigger>
                       <PopoverContent>
-                        <div className="px-1 py-2 bg-gray-300 rounded-md border-black		">
-                          <div className="text-small w-48 font-bold">Datos del conductor</div>
-                          <div className="text-tiny">
+                        <div className="px-2 py-2 bg-gray-300 rounded-md border border-gray-400">
+                          <div className="mb-2 text-small text-center font-bold text-gray-500">Datos del conductor</div>
                           <Input
-                            type="nombre"
-                            placeholder="Nombre"
-                            className="max-w-xs rounded-md"
+                            type="text"
+                            class="mb-2 rounded-lg" placeholder="   Nombre"
                           />
                           <Input
-                            type="apellido"
-                            placeholder="Apellido"
-                            className="max-w-xs mt-2 rounded-md"
+                            type="text"
+                            class="mb-2 rounded-lg" placeholder="   Apellido"
                           />
                           <Input
-                            type="edad"
-                            placeholder="Edad"
-                            className="max-w-xs mt-2 rounded-md"
+                            type="text"
+                            class="rounded-lg" placeholder="   Edad"
                           />
-                          <Button className="bg-emerald-400 rounded-md w-14 mt-2">
+                          <Button className="px-6 ml-12 mt-3 text-emerald-900 font-mono font-semibold text-sm w-17 rounded-full bg-auto bg-emerald-400 border border-emerald-400 hover:border-emerald-900">
                             Aplicar
                           </Button>
-                          </div>
                         </div>
                       </PopoverContent>
                     </Popover>
