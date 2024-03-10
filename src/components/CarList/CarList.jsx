@@ -3,27 +3,54 @@
 import React from "react";
 import {Input} from "@nextui-org/react";
 import {Popover, PopoverTrigger, PopoverContent, Button} from "@nextui-org/react";
-import whiteCar from "../../assets/white-car.png";
+import whiteCar from "../../assets/evoque-white.png";
 import car2 from "../../assets/car5.png";
-import car3 from "../../assets/car6.png";
+import car3 from "../../assets/toyota-tacoma.png";
+import car4 from "../../assets/ford-expedition.png";
+import car5 from "../../assets/volkswagen-atlas.png";
+import car6 from "../../assets/dmax-dc.png";
 
 const carList = [
   {
-    name: "BMW UX",
-    price: 100,
+    name: "Range Rover Evoque SUV ",
+    subname: "Land Rover",
+    price: 250,
     image: whiteCar,
     aosDelay: "0",
   },
   {
-    name: "KIA UX",
-    price: 140,
+    name: "Scorpio S3+",
+    subname: "Mahindra",
+    price: 100,
     image: car2,
     aosDelay: "500",
   },
   {
-    name: "BMW UX",
-    price: 100,
+    name: "Tacoma TRD PRO 2024",
+    subname: "Toyota",
+    price: 200,
     image: car3,
+    aosDelay: "1000",
+  },
+  {
+    name: "Expedition XLT",
+    subname: "Ford",
+    price: 230,
+    image: car4,
+    aosDelay: "700",
+  },
+  {
+    name: "Atlas 2.0T",
+    subname: "Volkswagen",
+    price: 120,
+    image: car5,
+    aosDelay: "800",
+  },
+  {
+    name: "D-MAX Double Cap",
+    subname: "Isuzu",
+    price: 150,
+    image: car6,
     aosDelay: "1000",
   },
 ];
@@ -37,11 +64,13 @@ const CarList = () => {
           data-aos="fade-up"
           className="text-3xl sm:text-4xl font-semibold font-serif mb-3"
         >
-          Lorem ipsum dolor
+          Flota de vehículos
         </h1>
-        <p data-aos="fade-up" aos-delay="400" className="text-sm pb-10">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor iure
-          nemo ab?
+        <p data-aos="fade-up" aos-delay="400" className="text-lg pb-10 font-mono mb-3 text-neutral-700 font-bold">
+          Categorias
+        </p>
+        <p data-aos="fade-up" aos-delay="400" className="text-2xl pb-10 font-serif mb-3 text-neutral-600 font-bold">
+          SUV:
         </p>
         {/* lista de carros */}
         <div>
@@ -57,17 +86,18 @@ const CarList = () => {
                   <img
                     src={data.image}
                     alt=""
-                    className="w-full h-[120px] object-contain sm:translate-x-8 group-hover:sm:translate-x-16 duration-700"
+                    className="w-full h-[120px] object-contain sm:translate-x-1 group-hover:sm:translate-x-6 duration-700"
                   />
                 </div>
                 <div className="space-y-2">
                   <h1 className="text-emerald-400 font-semibold">{data.name}</h1>
+                  <h2 className="text-neutral-900 font-semibold text-sm">{data.subname}</h2>
                   <div className="flex justify-between items-center text-xl font-semibold">
-                    <p>${data.price}/Day</p>
+                    <p>${data.price} / Día</p>
                     {/* boton de prueba para registro de conductor */}
                     <Popover placement="right">
                         <PopoverTrigger>
-                          <Button color="#3BD4AE" className="w-24 rounded-md bg-emerald-400">Alquilar</Button>
+                          <Button color="#3BD4AE" className="w-20 rounded-md bg-emerald-400">Alquilar</Button>
                         </PopoverTrigger>
                       <PopoverContent>
                         <div className="px-1 py-2 bg-gray-300 rounded-md border-black		">
@@ -97,9 +127,6 @@ const CarList = () => {
                     </Popover>
                   </div>
                 </div>
-                <p className="text-xl font-semibold absolute top-0 left-3">
-                  12Km
-                </p>
               </div>
             ))}
           </div>
