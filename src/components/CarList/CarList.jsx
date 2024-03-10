@@ -115,7 +115,7 @@ const CarList = () => {
                             class="rounded-lg" placeholder="   Edad"
                           />
                           <Button className="px-6 ml-12 mt-3 text-emerald-900 font-mono font-semibold text-sm w-17 rounded-full bg-auto bg-emerald-400 border border-emerald-400 hover:border-emerald-900">
-                            Aplicar
+                            Enviar
                           </Button>
                         </div>
                       </PopoverContent>
